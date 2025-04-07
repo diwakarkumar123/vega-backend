@@ -1,8 +1,15 @@
 {
   "name": "Vega_Blog_Backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "main": "dist/bin/www.js",
   "license": "MIT",
+"scripts": {
+  "start": "tsc && node ./dist/bin/www.js",
+  "dev": "nodemon ./bin/www.ts",
+  "build": "tsc",
+  "clean": "rm -rf dist"
+},
   "dependencies": {
     "aws-sdk": "^2.1692.0",
     "bcryptjs": "^3.0.2",
@@ -16,6 +23,12 @@
     "sequelize": "^6.37.6"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.0",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }
